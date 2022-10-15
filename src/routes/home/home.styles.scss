@@ -1,20 +1,13 @@
-.stats {
+.top-ten,
+.latest-news {
   display: flex;
-  flex-flow: row wrap;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
 
-  .stats-item {
-    width: 50%;
-    padding: 10px;
-
-    &__title {
-      font-size: 14px;
-      color: #bebebe;
-      padding: 10px 0;
-    }
-
-    &__count {
-      font-weight: 700;
-    }
+  .show-more a {
+    color: #40b5eb;
+    font-size: 13px;
+    font-weight: 700;
   }
 }

@@ -1,53 +1,29 @@
-import millify from "millify";
-import { useGetCryptosQuery } from "../../services/crypto-api";
+import { Link } from "react-router-dom";
+
+import GlobalStats from "../../components/global-stats/global-stats.component";
+import Cryptocurrencies from "../cryptocurrencies/cryptocurrencies.component";
+import News from "../news/news.component";
 
 import "./home.styles.scss";
 
 const Home = () => {
-  const { isFetching, data } = useGetCryptosQuery();
-
-  if (isFetching) return "Loading...";
-
-  const globalStats = data?.data?.stats;
-
-  console.log(data);
   return (
     <div className="home-container">
-      <div className="g-stats">
-        <div className="g-stats__title page-header">Global Crypto Stats</div>
-        <div className="stats">
-          <div className="stats-item">
-            <div className="stats-item__title">Total Cryptocurrencies</div>
-            <div className="stats-item__count">
-              {millify(globalStats.total)}
-            </div>
-          </div>
-          <div className="stats-item">
-            <div className="stats-item__title">Total Exchanges</div>
-            <div className="stats-item__count">
-              {millify(globalStats.totalExchanges)}
-            </div>
-          </div>
-          <div className="stats-item">
-            <div className="stats-item__title">Total Market Cap</div>
-            <div className="stats-item__count">
-              {millify(globalStats.totalMarketCap)}
-            </div>
-          </div>
-          <div className="stats-item">
-            <div className="stats-item__title">Total 24h Volume</div>
-            <div className="stats-item__count">
-              {millify(globalStats.total24hVolume)}
-            </div>
-          </div>
-          <div className="stats-item">
-            <div className="stats-item__title">Total Market</div>
-            <div className="stats-item__count">
-              {millify(globalStats.totalMarkets)}
-            </div>
-          </div>
+      <GlobalStats />
+      <div className="top-ten">
+        <div className="page-header">Top 10 Cryptocurrencies in the world</div>
+        <div className="show-more">
+          <Link to="/cryptocurrencies">Show more</Link>
         </div>
       </div>
+      <Cryptocurrencies simplified />
+      <div className="latest-news">
+        <div className="page-header">Latest News</div>
+        <div className="show-more">
+          <Link to="/news">Show more</Link>
+        </div>
+      </div>
+      <News simplified />
     </div>
   );
 };
