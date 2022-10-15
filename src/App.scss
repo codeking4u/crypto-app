@@ -25,6 +25,18 @@ a {
   display: flex;
   overflow: hidden;
 }
+
+.page-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  /*  background-color: $light-blue; */
+  padding: 10px 0;
+  margin: 10px 0;
+}
+.main {
+  width: 100%;
+  padding: 0 10px;
+}
 /* 
 .navbar {
   flex: 0.2;
