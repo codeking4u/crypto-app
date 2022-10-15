@@ -4,13 +4,17 @@ import { Outlet, Link } from "react-router-dom";
 import logo from "../../assets/cryptocurrency.png";
 import Footer from "../../components/footer/footer.component";
 
+import "./navigation.styles.scss";
+
 const Navigation = () => {
   return (
     <Fragment>
       <div className="nav-container">
         <div className="logo-container">
           <img src={logo} alt="" />
-          <Link to="/">CryptoWorld</Link>
+          <Link className="company-name" to="/">
+            CryptoWorld
+          </Link>
         </div>
         <div className="nav-links">
           <Link to="/">Home</Link>

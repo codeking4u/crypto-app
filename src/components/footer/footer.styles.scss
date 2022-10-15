@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #011930;
+
+  &__title {
+    color: #40b5eb;
+    margin: 20px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-around;
+    font-size: 13px;
+  }
+
+  &__link {
+    margin: 0 10px;
+  }
+
+  &__end {
+    font-size: 10px;
+    color: #fff;
+    padding: 20px;
+  }
+}

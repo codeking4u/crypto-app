@@ -8,7 +8,7 @@ import Cryptocurrencies from "./routes/cryptocurrencies/cryptocurrencies.compone
 import CryptoDetails from "./routes/crypto-details/crypto-details.component";
 import News from "./routes/news/news.component";
 
-import "./App.css";
+import "./App.scss";
 
 const App = () => {
   return (
