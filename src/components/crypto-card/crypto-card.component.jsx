@@ -13,7 +13,9 @@ const CryptoCard = ({ details }) => {
       <div className="crypto-card__body">
         <div className="price">{`Price: ${millify(price)}`}</div>
         <div className="market">{`Market: ${millify(marketCap)}`}</div>
-        <div className="daily-change">{`Daily Change: ${millify(change)}`}</div>
+        <div className="daily-change">{`Daily Change: ${millify(
+          change
+        )}%`}</div>
       </div>
     </div>
   );

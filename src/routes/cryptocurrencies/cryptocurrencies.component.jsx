@@ -10,7 +10,7 @@ const Cryptocurrencies = () => {
   const [cryptos, setCryptos] = useState(data?.data?.coins);
 
   if (isFetching) return "Loading...";
-  console.log(cryptos);
+
   return (
     <div className="cryptos-container">
       {cryptos?.map((crypto) => {
