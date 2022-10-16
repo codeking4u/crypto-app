@@ -1,0 +1,25 @@
+.crypto-card {
+  width: 250px;
+  background-color: #fff;
+  padding: 0 18px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #f9f9f9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .icon {
+      width: 20px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 20px 0;
+  }
+}

@@ -1,0 +1,6 @@
+.cryptos-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: space-between;
+}

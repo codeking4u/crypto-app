@@ -6,7 +6,7 @@ import "./global-stats.styles.scss";
 
 const GlobalStats = () => {
   const { isFetching, data } = useGetCryptosQuery();
-
+  console.log(data);
   if (isFetching) return "Loading...";
 
   const globalStats = data?.data?.stats;
