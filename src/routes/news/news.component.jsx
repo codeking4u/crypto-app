@@ -5,7 +5,9 @@ const News = () => {
   const { data, isFetching } = useGetNewsQuery();
 
   console.log(data);
-  return <div className="news-container">News</div>;
+  return (
+    <div className="news-container">sdf{process.env.REACT_APP_NEWSKEY}</div>
+  );
 };
 
 export default News;
