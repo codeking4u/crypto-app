@@ -29,7 +29,7 @@ const Cryptocurrencies = ({ simplified }) => {
 
   return (
     <>
-      {!simplified ? (
+      {!simplified && (
         <div className="crypto-search">
           <SearchIcon className="search-icon" />
           <input
@@ -39,8 +39,6 @@ const Cryptocurrencies = ({ simplified }) => {
             onChange={setSerachval}
           />
         </div>
-      ) : (
-        ""
       )}
       <div className="cryptos-container">
         {cryptos?.map((crypto) => {
